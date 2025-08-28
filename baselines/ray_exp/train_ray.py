@@ -15,15 +15,14 @@ env_config = {
         }
 
 ray.init(num_gpus=1)
-
-#algo = ppo.PPO(env=RedGymEnv, config={
-#    "num_gpus": 1,
-#    "model_config": {
-#        "use_lstm":True
-#    },
-#    "framework": "torch",
-#    "env_config": env_config,  # config to pass to env class
-#})
+algo = ppo.PPO(env=RedGymEnv, config={
+    "num_gpus": 1,
+    "model_config": {
+        "use_lstm":True
+    },
+    "framework": "torch",
+    "env_config": env_config,  # config to pass to env class
+})
 
 # Create the Algorithm from a config object.
 config = (
